@@ -1,7 +1,7 @@
 provider "aws" {
   region = "us-east-1"
-  access_key = ""
-  secret_key = ""
+  access_key = "" ##Senstive content, can be removed, aws configure is a better option
+  secret_key = "" ##Senstive content, can be removed, aws configure is a better option
 }
 
 resource "aws_instance" "ec2_terraform1" {
