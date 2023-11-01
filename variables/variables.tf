@@ -1,15 +1,31 @@
 #default variables
-
-variable "vpn_IP" { ###to be used in varsdemo, sec1, sec2, and sec3 
-    default = "116.50.30.20/32"
+variable "vpn_IP" {
+    type = string
+    default = "127.0.0.1"
+}
+variable "instancetype" {
+    type = string
+    default = "t2-micro"
 } 
-
-variable "instancetype" { ###to be used in varsdemo, instance1 
-    default = "t2.micro"
+variable "goldenami" {
+    type = string
+    default = "ami-123456"
 } 
-variable "goldenami" { ###to be used in varsdemo, instance1 
-    default = "ami-124356722"
-} 
+variable "elb_name" {
+    type = string
+    default = "demo_elb"
+}
+variable "AZ" {
+    type = list()
+    default = ["us-east-1"]
+}
+variable "timeout" {
+    type = number
+    default = 10
+}
+variable "mapping"{
+    type = map(string)
+}
 
 #default value can be override by env vars, e.g: terraform plan -var "instance_type=t2.small"
 # if no default value is set, The cli will ask for a value of variable
