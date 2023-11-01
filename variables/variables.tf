@@ -13,7 +13,7 @@ variable "goldenami" {
 } 
 variable "elb_name" {
     type = string
-    default = "demo_elb"
+    default = "demo-elb"
 }
 variable "AZ" {
     type = list()
