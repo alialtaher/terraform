@@ -18,3 +18,11 @@ variable "Prd_instance_type" {
     type = string
     default = "t2.large"
 }
+variable "prd_instance" {
+    type = string
+    default = "prd_instance"
+}
+variable "dev_instance" {
+    type = string
+    default = "dev_instance"
+}

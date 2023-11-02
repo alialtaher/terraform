@@ -5,6 +5,7 @@ locals {
   common_tags= {
     owner = "alialtaheralhamod@gmail.com"
     product_name= "DevOps"
+    Name= var.Dev_instance_type ==true ? var.dev_instance : var.prd_instance # using condition in locals to create a 3rd instance as a bastion host if the env type is production
   }
 }
 # if it is a  test instance, create one t2.micro instance
