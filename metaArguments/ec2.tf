@@ -8,7 +8,7 @@ resource "aws_instance" "NewEc2" {
     }
     lifecycle {
       ignore_changes = [ tags ]
-      prevent_destroy = true
+      prevent_destroy = false
       create_before_destroy = true
 #      replace_triggered_by = [  ]
     }
