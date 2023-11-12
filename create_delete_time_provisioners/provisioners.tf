@@ -46,6 +46,7 @@ resource "aws_instance" "instance" {
             "touch /home/backup.sh",
             "chmod 550 /home/backup.sh"
          ]
+         on_failure = continue
       
     }
     provisioner "remote-exec" {
@@ -55,6 +56,7 @@ resource "aws_instance" "instance" {
             "cd /home/ && ./backup.ssh",
             "sudo yum remove -y nginx",
          ]
+         on_failure = fail  ###Default
       
     }
 }
