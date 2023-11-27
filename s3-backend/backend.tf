@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
     bucket = "terraform-state-files-alialt"
-    keykey = "ec2/terraform.tfstate"
+    key = "ec2/terraform.tfstate"
     region = "us-east-1"
-    dynamodynamodb_table = "terraform-remote-tfstate"    
+    dynamodb_table = "terraform-remote-tfstate"    
   }
 }
