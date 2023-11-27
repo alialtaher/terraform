@@ -7,5 +7,5 @@ Each folder contains details about a specific section/sections, Each folder has 
 
 ## Contents:
 1. simple
-2. 
+2. required_providers
 3. 
